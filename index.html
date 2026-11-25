@@ -1,0 +1,991 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دَعْوَةُ حَفْلِ خُطُوبَة | أَحْمَد &amp; آلاء</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Amiri, Aref Ruqaa & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBase: '#fbf7f4',
+                        creamCard: '#fffcfb',
+                        blushSoft: '#f6e1e3',
+                        blushPetal: '#e7bfc4',
+                        roseDust: '#c5848d',
+                        bronzeBrown: '#543525',
+                        bronzeLight: '#7a523c',
+                        goldChampagne: '#c59f5d',
+                        goldLight: '#ebd4a7',
+                        goldDark: '#967236',
+                    },
+                    fontFamily: {
+                        amiri: ['Amiri', 'serif'],
+                        ruqaa: ['Aref Ruqaa', 'serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fbf7f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c59f5d;
+            border-radius: 4px;
+        }
+
+        /* Luxury Romantic Silk & Floral Ambient Background */
+        .romantic-bg {
+            background-color: #fbf7f4;
+            background-image:
+                radial-gradient(circle at 10% 10%, rgba(246, 225, 227, 0.9) 0%, transparent 45%),
+                radial-gradient(circle at 90% 15%, rgba(231, 191, 196, 0.75) 0%, transparent 45%),
+                radial-gradient(circle at 15% 90%, rgba(231, 191, 196, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(246, 225, 227, 0.9) 0%, transparent 50%),
+                linear-gradient(180deg, #fffcfb 0%, #f8efec 100%);
+        }
+
+        /* Double Gold Ornate Wedding Frame with Shimmer */
+        .wedding-frame {
+            position: relative;
+            background: linear-gradient(180deg, rgba(255, 252, 251, 0.96) 0%, rgba(251, 244, 241, 0.98) 100%);
+            border: 1.5px solid #c59f5d;
+            box-shadow:
+                0 25px 60px -15px rgba(84, 53, 37, 0.16),
+                0 0 0 1px rgba(197, 159, 93, 0.2),
+                inset 0 0 50px rgba(246, 225, 227, 0.5);
+        }
+        .wedding-frame::before {
+            content: '';
+            position: absolute;
+            inset: 9px;
+            border: 1px solid rgba(197, 159, 93, 0.6);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+        .wedding-frame::after {
+            content: '';
+            position: absolute;
+            inset: 13px;
+            border: 1px dashed rgba(197, 159, 93, 0.35);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        /* Interactive Envelope Intro Overlay */
+        #envelopeOverlay {
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.85s;
+        }
+        #envelopeOverlay.opened {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Wax Seal Pulse & 3D Shine */
+        .wax-seal {
+            background: radial-gradient(circle at 32% 30%, #f2dca6 0%, #c59f5d 48%, #8b6629 100%);
+            box-shadow:
+                0 12px 28px rgba(84, 53, 37, 0.35),
+                inset 0 2px 5px rgba(255, 255, 255, 0.65),
+                inset 0 -4px 8px rgba(68, 43, 14, 0.5);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .wax-seal:hover {
+            transform: scale(1.07);
+        }
+        .wax-seal:active {
+            transform: scale(0.96);
+        }
+
+        @keyframes floatGentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: floatGentle 3.5s ease-in-out infinite;
+        }
+
+        /* Gold Shimmer Text Effect */
+        .gold-shimmer {
+            background: linear-gradient(90deg, #543525 0%, #967236 45%, #c59f5d 50%, #967236 55%, #543525 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmerText 6s linear infinite;
+        }
+        @keyframes shimmerText {
+            to { background-position: 200% center; }
+        }
+
+        /* Active Music Wave Ring */
+        @keyframes musicWave {
+            0%, 100% { transform: scale(1); opacity: 0.75; }
+            50% { transform: scale(1.25); opacity: 0.15; }
+        }
+        .music-wave-ring {
+            animation: musicWave 1.8s ease-out infinite;
+        }
+    </style>
+</head>
+<body class="romantic-bg text-bronzeBrown font-tajawal antialiased selection:bg-blushPetal selection:text-bronzeBrown overflow-x-hidden min-h-screen pb-28">
+
+    <!-- Canvas for Falling Rose Petals & Golden Bokeh -->
+    <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+    <!-- ==================== INTERACTIVE SEALED ENVELOPE INTRO ==================== -->
+    <div id="envelopeOverlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#f9efe9]/95 backdrop-blur-md">
+        <!-- Decorative Corner Glows -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-blushPetal/40 blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-goldLight/40 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-md w-full bg-gradient-to-b from-[#fffdfc] to-[#f7ece7] rounded-[2rem] border-2 border-goldChampagne/70 shadow-2xl p-8 sm:p-10 text-center overflow-hidden">
+            <!-- Envelope Flap Geometric Lines -->
+            <svg class="w-full h-24 absolute top-0 left-0 pointer-events-none opacity-45" viewBox="0 0 400 100" preserveAspectRatio="none">
+                <path d="M0 0 L200 88 L400 0" fill="none" stroke="#c59f5d" stroke-width="1.5"/>
+                <path d="M0 6 L200 94 L400 6" fill="none" stroke="#c59f5d" stroke-width="0.7" stroke-dasharray="4 4"/>
+            </svg>
+
+            <!-- Top Floral Accent -->
+            <div class="mt-4 mb-3 flex justify-center">
+                <span class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-goldDark font-bold bg-blushSoft/60 px-4 py-1 rounded-full border border-goldChampagne/30">
+                    <i class="fa-solid fa-sparkles text-goldChampagne"></i>
+                    بطاقة دعوة خاصة
+                </span>
+            </div>
+
+            <h2 class="font-ruqaa text-3xl sm:text-4xl text-bronzeBrown font-bold mt-3 mb-1">
+                أَحْمَد &amp; آلاء
+            </h2>
+            <p class="text-sm text-bronzeLight mb-7">
+                يسرّنا دعوتكم لمشاركتنا أجمل لحظات العمر
+            </p>
+
+            <!-- Interactive Golden Wax Seal Button -->
+            <div class="relative flex flex-col items-center justify-center my-4">
+                <button id="openEnvelopeBtn" type="button" aria-label="فتح الدعوة" class="wax-seal animate-float w-28 h-28 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center border-4 border-[#f7e7be]/80 cursor-pointer group relative">
+                    <div class="absolute inset-2 rounded-full border border-[#fff6dc]/60"></div>
+                    <span class="font-ruqaa text-2xl sm:text-3xl text-[#462a17] font-bold drop-shadow-sm">
+                        أ &amp; آ
+                    </span>
+                    <span class="text-[10px] font-bold text-[#462a17]/90 mt-1 tracking-wide">
+                        افتح الدعوة
+                    </span>
+                </button>
+            </div>
+
+            <p class="mt-6 text-xs sm:text-sm text-bronzeLight/90 font-medium flex items-center justify-center gap-2">
+                <i class="fa-solid fa-music text-goldDark animate-bounce"></i>
+                <span>اضغط على الختم الذهبي لفتح الدعوة وتشغيل الزفة</span>
+            </p>
+
+            <!-- Direct Open Button -->
+            <div class="mt-4">
+                <button id="directOpenBtn" type="button" class="text-xs font-bold text-goldDark hover:text-bronzeBrown underline underline-offset-4 transition">
+                    دخول مباشر إلى البطاقة
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN INVITATION CARD SECTION ==================== -->
+    <main class="relative z-10 pt-8 sm:pt-12 px-3 sm:px-6">
+        <div class="max-w-2xl mx-auto">
+
+            <!-- Main Luxury Ornamental Card -->
+            <div class="wedding-frame rounded-[2.2rem] px-5 py-12 sm:px-12 sm:py-16 text-center overflow-hidden">
+
+                <!-- Rich Layered Floral Bouquet - Top Right -->
+                <svg class="w-36 h-36 sm:w-48 sm:h-48 absolute -top-3 -right-3 pointer-events-none opacity-95" viewBox="0 0 200 200" fill="none">
+                    <path d="M200 0C150 10 110 45 90 100C135 80 175 45 200 0Z" fill="#f6e1e3" fill-opacity="0.7"/>
+                    <path d="M165 25C140 20 120 35 110 55C130 50 150 40 165 25Z" fill="#c59f5d" fill-opacity="0.28" stroke="#c59f5d" stroke-width="0.9"/>
+                    <path d="M180 55C155 58 140 75 135 95C155 88 170 75 180 55Z" fill="#c59f5d" fill-opacity="0.25" stroke="#c59f5d" stroke-width="0.9"/>
+                    <path d="M135 15C112 10 92 18 80 34C102 32 120 26 135 15Z" fill="#c59f5d" fill-opacity="0.22" stroke="#c59f5d" stroke-width="0.9"/>
+                    <circle cx="168" cy="30" r="24" fill="#e7bfc4"/>
+                    <circle cx="168" cy="30" r="16" fill="#f6e1e3"/>
+                    <circle cx="168" cy="30" r="8" fill="#c5848d" fill-opacity="0.55"/>
+                    <circle cx="136" cy="22" r="17" fill="#f6e1e3" stroke="#e7bfc4" stroke-width="1"/>
+                    <circle cx="136" cy="22" r="8" fill="#e7bfc4"/>
+                    <circle cx="176" cy="64" r="19" fill="#f6e1e3" stroke="#e7bfc4" stroke-width="1"/>
+                    <circle cx="176" cy="64" r="9" fill="#c5848d" fill-opacity="0.45"/>
+                    <circle cx="112" cy="40" r="3.5" fill="#fff"/>
+                    <circle cx="104" cy="48" r="2.5" fill="#c59f5d"/>
+                    <circle cx="152" cy="84" r="3.5" fill="#fff"/>
+                    <circle cx="145" cy="92" r="2.5" fill="#c59f5d"/>
+                </svg>
+
+                <!-- Rich Layered Floral Bouquet - Top Left (Mirrored) -->
+                <svg class="w-36 h-36 sm:w-48 sm:h-48 absolute -top-3 -left-3 -scale-x-100 pointer-events-none opacity-95" viewBox="0 0 200 200" fill="none">
+                    <path d="M200 0C150 10 110 45 90 100C135 80 175 45 200 0Z" fill="#f6e1e3" fill-opacity="0.7"/>
+                    <path d="M165 25C140 20 120 35 110 55C130 50 150 40 165 25Z" fill="#c59f5d" fill-opacity="0.28" stroke="#c59f5d" stroke-width="0.9"/>
+                    <path d="M180 55C155 58 140 75 135 95C155 88 170 75 180 55Z" fill="#c59f5d" fill-opacity="0.25" stroke="#c59f5d" stroke-width="0.9"/>
+                    <path d="M135 15C112 10 92 18 80 34C102 32 120 26 135 15Z" fill="#c59f5d" fill-opacity="0.22" stroke="#c59f5d" stroke-width="0.9"/>
+                    <circle cx="168" cy="30" r="24" fill="#e7bfc4"/>
+                    <circle cx="168" cy="30" r="16" fill="#f6e1e3"/>
+                    <circle cx="168" cy="30" r="8" fill="#c5848d" fill-opacity="0.55"/>
+                    <circle cx="136" cy="22" r="17" fill="#f6e1e3" stroke="#e7bfc4" stroke-width="1"/>
+                    <circle cx="136" cy="22" r="8" fill="#e7bfc4"/>
+                    <circle cx="176" cy="64" r="19" fill="#f6e1e3" stroke="#e7bfc4" stroke-width="1"/>
+                    <circle cx="176" cy="64" r="9" fill="#c5848d" fill-opacity="0.45"/>
+                    <circle cx="112" cy="40" r="3.5" fill="#fff"/>
+                    <circle cx="104" cy="48" r="2.5" fill="#c59f5d"/>
+                    <circle cx="152" cy="84" r="3.5" fill="#fff"/>
+                    <circle cx="145" cy="92" r="2.5" fill="#c59f5d"/>
+                </svg>
+
+                <!-- Top Crown Arabesque Crest -->
+                <div class="flex justify-center mb-3 relative z-10">
+                    <svg class="w-52 sm:w-64 h-14 text-goldChampagne" viewBox="0 0 260 60" fill="none">
+                        <path d="M130 6C122 18 110 23 94 23C110 26 120 33 130 46C140 33 150 26 166 23C150 23 138 18 130 6Z" fill="#c59f5d" fill-opacity="0.22" stroke="#c59f5d" stroke-width="1.3"/>
+                        <circle cx="130" cy="25" r="3.5" fill="#c59f5d"/>
+                        <path d="M94 23C74 23 60 36 38 34C24 32 14 24 6 28" stroke="#c59f5d" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M166 23C186 23 200 36 222 34C236 32 246 24 254 28" stroke="#c59f5d" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M84 30C70 38 56 38 46 33" stroke="#c59f5d" stroke-width="0.8"/>
+                        <path d="M176 30C190 38 204 38 214 33" stroke="#c59f5d" stroke-width="0.8"/>
+                        <circle cx="66" cy="29" r="4" fill="#e7bfc4" stroke="#c59f5d" stroke-width="0.8"/>
+                        <circle cx="194" cy="29" r="4" fill="#e7bfc4" stroke="#c59f5d" stroke-width="0.8"/>
+                    </svg>
+                </div>
+
+                <!-- Side Victorian Filigree Ornaments -->
+                <svg class="hidden sm:block w-8 h-36 text-goldChampagne/75 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 32 140" fill="none">
+                    <path d="M16 4C7 28 25 48 16 70C7 92 25 112 16 136" stroke="currentColor" stroke-width="1.3"/>
+                    <path d="M16 42C24 48 24 58 16 64C8 58 8 48 16 42Z" fill="#e7bfc4" fill-opacity="0.6" stroke="currentColor" stroke-width="0.9"/>
+                    <path d="M16 76C24 82 24 92 16 98C8 92 8 82 16 76Z" fill="#e7bfc4" fill-opacity="0.6" stroke="currentColor" stroke-width="0.9"/>
+                    <circle cx="16" cy="70" r="3.5" fill="#c59f5d"/>
+                </svg>
+                <svg class="hidden sm:block w-8 h-36 text-goldChampagne/75 absolute left-3.5 top-1/2 -translate-y-1/2 -scale-x-100 pointer-events-none" viewBox="0 0 32 140" fill="none">
+                    <path d="M16 4C7 28 25 48 16 70C7 92 25 112 16 136" stroke="currentColor" stroke-width="1.3"/>
+                    <path d="M16 42C24 48 24 58 16 64C8 58 8 48 16 42Z" fill="#e7bfc4" fill-opacity="0.6" stroke="currentColor" stroke-width="0.9"/>
+                    <path d="M16 76C24 82 24 92 16 98C8 92 8 82 16 76Z" fill="#e7bfc4" fill-opacity="0.6" stroke="currentColor" stroke-width="0.9"/>
+                    <circle cx="16" cy="70" r="3.5" fill="#c59f5d"/>
+                </svg>
+
+                <!-- 1. Main Title (Exact Text from Image) -->
+                <h1 class="font-ruqaa text-3xl sm:text-5xl text-bronzeBrown font-bold tracking-wide leading-relaxed mt-2 mb-4 relative z-10">
+                    دَعْوَةُ حَفْلِ خُطُوبَة
+                </h1>
+
+                <!-- Interlocking Gold Engagement Rings Decorative Emblem -->
+                <div class="flex justify-center my-3 relative z-10">
+                    <svg class="w-24 h-12" viewBox="0 0 110 52" fill="none">
+                        <circle cx="44" cy="29" r="15" stroke="#c59f5d" stroke-width="2.4"/>
+                        <circle cx="44" cy="29" r="12.5" stroke="#ebd4a7" stroke-width="0.8"/>
+                        <circle cx="66" cy="29" r="15" stroke="#967236" stroke-width="2.4"/>
+                        <circle cx="66" cy="29" r="12.5" stroke="#ebd4a7" stroke-width="0.8"/>
+                        <polygon points="66,6 72,12 66,17 60,12" fill="#fff" stroke="#c59f5d" stroke-width="1.2"/>
+                        <line x1="60" y1="12" x2="72" y2="12" stroke="#c59f5d" stroke-width="0.8"/>
+                        <line x1="66" y1="1" x2="66" y2="4" stroke="#c59f5d" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="56" y1="5" x2="58" y2="7" stroke="#c59f5d" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="76" y1="5" x2="74" y2="7" stroke="#c59f5d" stroke-width="1.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <!-- 2. Couple Names (Exact Text & Ampersand Styling from Image) -->
+                <div class="my-4 py-2 flex items-center justify-center gap-3 sm:gap-5 flex-wrap relative z-10">
+                    <span id="displayGroomName" class="font-ruqaa text-4xl sm:text-6xl gold-shimmer font-bold leading-tight py-1">
+                        أَحْمَد
+                    </span>
+                    <span class="font-amiri text-3xl sm:text-5xl text-goldChampagne font-normal italic select-none drop-shadow-sm">
+                        &amp;
+                    </span>
+                    <span id="displayBrideName" class="font-ruqaa text-4xl sm:text-6xl gold-shimmer font-bold leading-tight py-1">
+                        آلاء
+                    </span>
+                </div>
+
+                <!-- Ornamental Floral & Heart Divider -->
+                <div class="flex items-center justify-center gap-3 my-5 relative z-10">
+                    <span class="h-[1px] w-16 sm:w-24 bg-gradient-to-l from-goldChampagne to-transparent"></span>
+                    <span class="w-2 h-2 rotate-45 border border-goldChampagne"></span>
+                    <i class="fa-solid fa-heart text-roseDust text-sm"></i>
+                    <span class="w-2 h-2 rotate-45 border border-goldChampagne"></span>
+                    <span class="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-goldChampagne to-transparent"></span>
+                </div>
+
+                <!-- 3. Invitation Body Text (Exact Text from Image) -->
+                <p class="font-tajawal text-lg sm:text-2xl text-bronzeBrown/95 font-medium leading-relaxed max-w-md mx-auto my-5 relative z-10">
+                    يتشرفان بدعوتكم لمشاركتهما
+                    <br>
+                    فرحة خطوبتهما
+                </p>
+
+                <!-- 4. Date & Time Display (Exact Date Text: 12 ديسمبر 2026) -->
+                <div class="my-7 relative z-10">
+                    <div class="inline-block bg-blushSoft/45 border border-goldChampagne/45 rounded-full px-6 py-2.5 shadow-sm">
+                        <p id="displayDateText" class="font-tajawal text-xl sm:text-2xl font-bold text-bronzeBrown tracking-wide">
+                            التاريخ: 12 ديسمبر 2026
+                        </p>
+                    </div>
+                    <p class="text-sm sm:text-base text-bronzeLight mt-3 font-medium">
+                        <i class="fa-regular fa-clock text-goldDark ml-1"></i>
+                        <span id="displayTimeText">الساعة 7:00 مساءً</span>
+                    </p>
+                </div>
+
+                <!-- 5. Prominent Address Box (Rotterdam) -->
+                <div class="my-7 bg-gradient-to-b from-[#fffdfc] to-blushSoft/35 border border-goldChampagne/60 rounded-2xl p-5 sm:p-6 max-w-lg mx-auto shadow-sm relative z-10">
+                    <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-goldDark mb-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>عنوان الحفل</span>
+                    </div>
+                    <p id="displayAddressText" dir="ltr" class="font-tajawal text-base sm:text-lg font-bold text-bronzeBrown select-all">
+                        Burgemeester Molenaarstraat 140, 3078 VD Rotterdam
+                    </p>
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5">
+                        <a id="cardMapBtn" href="https://maps.google.com/?q=Burgemeester+Molenaarstraat+140,+3078+VD+Rotterdam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-bronzeBrown hover:bg-bronzeLight text-creamCard text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow transition">
+                            <i class="fa-solid fa-map-location-dot text-goldLight"></i>
+                            <span>فتح في خرائط جوجل</span>
+                        </a>
+                        <button id="copyAddressBtn" type="button" class="inline-flex items-center gap-1.5 bg-creamCard hover:bg-blushSoft/70 text-bronzeBrown border border-goldChampagne/70 text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-sm transition">
+                            <i id="copyAddressIcon" class="fa-regular fa-copy text-goldDark"></i>
+                            <span id="copyAddressLabel">نسخ العنوان</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. Live Countdown Section (12 December 2026) -->
+                <div class="my-8 bg-gradient-to-b from-creamBase/95 to-blushSoft/30 border border-goldChampagne/50 rounded-2xl p-4 sm:p-6 max-w-lg mx-auto shadow-inner relative z-10">
+                    <p class="text-xs sm:text-sm text-bronzeLight font-bold mb-3 flex items-center justify-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-goldChampagne"></span>
+                        <span>العد التنازلي لموعد الفرحة (12 ديسمبر 2026)</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-goldChampagne"></span>
+                    </p>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-3" dir="ltr">
+                        <div class="bg-white/95 rounded-xl py-2.5 px-1 sm:py-3.5 border border-goldChampagne/35 shadow-sm">
+                            <div id="cd-seconds" class="font-amiri text-2xl sm:text-4xl font-bold text-bronzeBrown">00</div>
+                            <div class="text-[11px] sm:text-xs text-bronzeLight mt-0.5 font-medium">ثانية</div>
+                        </div>
+                        <div class="bg-white/95 rounded-xl py-2.5 px-1 sm:py-3.5 border border-goldChampagne/35 shadow-sm">
+                            <div id="cd-minutes" class="font-amiri text-2xl sm:text-4xl font-bold text-bronzeBrown">00</div>
+                            <div class="text-[11px] sm:text-xs text-bronzeLight mt-0.5 font-medium">دقيقة</div>
+                        </div>
+                        <div class="bg-white/95 rounded-xl py-2.5 px-1 sm:py-3.5 border border-goldChampagne/35 shadow-sm">
+                            <div id="cd-hours" class="font-amiri text-2xl sm:text-4xl font-bold text-bronzeBrown">00</div>
+                            <div class="text-[11px] sm:text-xs text-bronzeLight mt-0.5 font-medium">ساعة</div>
+                        </div>
+                        <div class="bg-white/95 rounded-xl py-2.5 px-1 sm:py-3.5 border border-goldChampagne/35 shadow-sm">
+                            <div id="cd-days" class="font-amiri text-2xl sm:text-4xl font-bold text-bronzeBrown">00</div>
+                            <div class="text-[11px] sm:text-xs text-bronzeLight mt-0.5 font-medium">يوم</div>
+                        </div>
+                    </div>
+                    <p id="countdownMessage" class="mt-3 text-xs text-goldDark font-bold"></p>
+                </div>
+
+                <!-- 7. Important Notes Section (Exact Text from Image) -->
+                <div class="mt-9 pt-7 border-t border-goldChampagne/45 relative z-10">
+                    <div class="bg-gradient-to-b from-blushSoft/55 to-blushPetal/35 rounded-2xl p-5 sm:p-6 border border-goldChampagne/40 text-center space-y-2.5 shadow-sm">
+                        <p class="font-tajawal text-sm sm:text-base font-bold text-bronzeBrown leading-relaxed">
+                            ملاحظة: يُمنع التصوير منعاً باتاً وسيتم أخذ الهواتف عند الدخول
+                        </p>
+                        <p class="font-tajawal text-sm sm:text-base font-bold text-bronzeBrown leading-relaxed">
+                            • لعدم الإحراج يمنع اصطحاب الأطفال بجميع الأعمار منعاً باتاً (رجاءً)
+                        </p>
+                        <p class="font-tajawal text-sm sm:text-base font-bold text-bronzeBrown leading-relaxed">
+                            • الدّعوة للمدعوين فقط
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bottom Silk Drape & Floral Corner Accents -->
+                <svg class="w-32 h-32 sm:w-40 sm:h-40 absolute -bottom-3 -right-3 -scale-y-100 pointer-events-none opacity-90" viewBox="0 0 200 200" fill="none">
+                    <path d="M200 0C150 10 110 45 90 100C135 80 175 45 200 0Z" fill="#f6e1e3" fill-opacity="0.7"/>
+                    <circle cx="168" cy="30" r="24" fill="#e7bfc4"/>
+                    <circle cx="168" cy="30" r="15" fill="#f6e1e3"/>
+                    <circle cx="136" cy="22" r="17" fill="#f6e1e3"/>
+                    <circle cx="176" cy="64" r="19" fill="#f6e1e3"/>
+                </svg>
+                <svg class="w-32 h-32 sm:w-40 sm:h-40 absolute -bottom-3 -left-3 -scale-x-100 -scale-y-100 pointer-events-none opacity-90" viewBox="0 0 200 200" fill="none">
+                    <path d="M200 0C150 10 110 45 90 100C135 80 175 45 200 0Z" fill="#f6e1e3" fill-opacity="0.7"/>
+                    <circle cx="168" cy="30" r="24" fill="#e7bfc4"/>
+                    <circle cx="168" cy="30" r="15" fill="#f6e1e3"/>
+                    <circle cx="136" cy="22" r="17" fill="#f6e1e3"/>
+                    <circle cx="176" cy="64" r="19" fill="#f6e1e3"/>
+                </svg>
+            </div>
+
+            <!-- ==================== ACTION BAR (CALENDAR, MAP & WHATSAPP SHARE) ==================== -->
+            <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+                <button id="calendarBtn" type="button" class="inline-flex items-center justify-center gap-2 bg-creamCard hover:bg-blushSoft/70 text-bronzeBrown border border-goldChampagne/70 font-bold px-5 py-3.5 rounded-full shadow-md transition text-sm">
+                    <i class="fa-regular fa-calendar-plus text-goldDark text-base"></i>
+                    <span>أضف للتقويم</span>
+                </button>
+
+                <a id="mapActionBtn" href="https://maps.google.com/?q=Burgemeester+Molenaarstraat+140,+3078+VD+Rotterdam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-creamCard hover:bg-blushSoft/70 text-bronzeBrown border border-goldChampagne/70 font-bold px-5 py-3.5 rounded-full shadow-md transition text-sm">
+                    <i class="fa-solid fa-location-dot text-goldDark text-base"></i>
+                    <span>موقع القاعة</span>
+                </a>
+
+                <button id="whatsappShareBtn" type="button" class="inline-flex items-center justify-center gap-2 bg-bronzeBrown hover:bg-bronzeLight text-creamCard border border-goldChampagne/50 font-bold px-6 py-3.5 rounded-full shadow-md transition text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg text-goldLight"></i>
+                    <span>مشاركة عبر واتساب</span>
+                </button>
+            </div>
+
+            <!-- Subtle Toast Status Message -->
+            <div id="statusToast" class="mt-4 text-center text-xs sm:text-sm font-bold text-goldDark min-h-[1.25rem]"></div>
+        </div>
+    </main>
+
+    <!-- ==================== COMPACT FLOATING MUSIC BUTTON ==================== -->
+    <div class="fixed bottom-5 left-5 z-40">
+        <span id="musicWaveRing" class="hidden music-wave-ring absolute inset-0 rounded-full border-2 border-goldChampagne pointer-events-none"></span>
+        <button id="musicPlayBtn" type="button" aria-label="تشغيل أو إيقاف موسيقى الزفة" title="تشغيل / إيقاف موسيقى الزفة" class="relative w-12 h-12 rounded-full bg-creamCard/95 backdrop-blur-md border-2 border-goldChampagne text-bronzeBrown shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition">
+            <i id="musicPlayIcon" class="fa-solid fa-volume-xmark text-base text-bronzeLight"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // ==================== INVITATION STATE ====================
+        // Target date set strictly to December 12, 2026 at 19:00 local time.
+        const INVITATION_CONFIG = {
+            groomName: "أَحْمَد",
+            brideName: "آلاء",
+            dateText: "التاريخ: 12 ديسمبر 2026",
+            eventDate: { year: 2026, month: 12, day: 12, hour: 19, minute: 0, second: 0 },
+            timeText: "الساعة 7:00 مساءً",
+            address: "Burgemeester Molenaarstraat 140, 3078 VD Rotterdam",
+            mapUrl: "https://maps.google.com/?q=Burgemeester+Molenaarstraat+140,+3078+VD+Rotterdam"
+        };
+
+        /**
+         * Returns a Date instance representing December 12, 2026 19:00 in local time.
+         */
+        function getTargetEventDate() {
+            const { year, month, day, hour, minute, second } = INVITATION_CONFIG.eventDate;
+            return new Date(year, month - 1, day, hour, minute, second);
+        }
+
+        // ==================== AUDIO ENGINE STATE ====================
+        let audioCtx = null;
+        let masterGain = null;
+        let isZaffaPlaying = false;
+        let zaffaStep = 0;
+        let zaffaTimeout = null;
+        let countdownInterval = null;
+
+        // ==================== SAFE INITIALIZATION ====================
+        document.addEventListener("DOMContentLoaded", () => {
+            bindUIEvents();
+            startCountdown();
+            initAmbientCanvas();
+            updateMusicUI(false);
+        });
+
+        function showStatusMessage(message) {
+            const toast = document.getElementById("statusToast");
+            if (!toast) return;
+            toast.textContent = message;
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(() => {
+                toast.textContent = "";
+            }, 3000);
+        }
+
+        function bindUIEvents() {
+            const openBtn = document.getElementById("openEnvelopeBtn");
+            const directOpenBtn = document.getElementById("directOpenBtn");
+            const musicBtn = document.getElementById("musicPlayBtn");
+            const copyAddressBtn = document.getElementById("copyAddressBtn");
+            const calendarBtn = document.getElementById("calendarBtn");
+            const whatsappBtn = document.getElementById("whatsappShareBtn");
+
+            if (openBtn) openBtn.addEventListener("click", openInvitationEnvelope);
+            if (directOpenBtn) directOpenBtn.addEventListener("click", openInvitationEnvelope);
+            if (musicBtn) musicBtn.addEventListener("click", toggleZaffaMusic);
+            if (copyAddressBtn) copyAddressBtn.addEventListener("click", copyEventAddress);
+            if (calendarBtn) calendarBtn.addEventListener("click", downloadICS);
+            if (whatsappBtn) whatsappBtn.addEventListener("click", shareViaWhatsApp);
+        }
+
+        // ==================== ENVELOPE OPENING & CELEBRATION BURST ====================
+        function openInvitationEnvelope() {
+            try {
+                const overlay = document.getElementById("envelopeOverlay");
+                if (overlay) {
+                    overlay.classList.add("opened");
+                }
+                triggerPetalBurst();
+                startZaffaMusic();
+            } catch (err) {
+                console.warn("Error opening envelope:", err);
+            }
+        }
+
+        // ==================== LIVE COUNTDOWN TIMER (12 DECEMBER 2026) ====================
+        function startCountdown() {
+            try {
+                if (countdownInterval) clearInterval(countdownInterval);
+
+                const daysEl = document.getElementById("cd-days");
+                const hoursEl = document.getElementById("cd-hours");
+                const minutesEl = document.getElementById("cd-minutes");
+                const secondsEl = document.getElementById("cd-seconds");
+                const msgEl = document.getElementById("countdownMessage");
+                const targetTime = getTargetEventDate().getTime();
+
+                function update() {
+                    try {
+                        const now = Date.now();
+                        const diff = targetTime - now;
+
+                        if (isNaN(targetTime) || diff <= 0) {
+                            if (daysEl) daysEl.textContent = "00";
+                            if (hoursEl) hoursEl.textContent = "00";
+                            if (minutesEl) minutesEl.textContent = "00";
+                            if (secondsEl) secondsEl.textContent = "00";
+                            if (msgEl) msgEl.textContent = "حانت لحظة الفرح! أهلاً وسهلاً بضيوفنا الكرام.";
+                            return;
+                        }
+
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                        if (daysEl) daysEl.textContent = String(days).padStart(2, "0");
+                        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, "0");
+                        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, "0");
+                        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, "0");
+                        if (msgEl) msgEl.textContent = "";
+                    } catch (innerErr) {
+                        console.warn("Countdown tick error:", innerErr);
+                    }
+                }
+
+                update();
+                countdownInterval = setInterval(update, 1000);
+            } catch (err) {
+                console.warn("Countdown initialization error:", err);
+            }
+        }
+
+        // ==================== BRIDAL ZAFFA WEB AUDIO SYNTHESIZER ====================
+        const ZAFFA_NOTES = {
+            "D3": 146.83,
+            "A3": 220.00,
+            "A4": 440.00,
+            "Bb4": 466.16,
+            "C#5": 554.37,
+            "D5": 587.33,
+            "Eb5": 622.25,
+            "F#5": 739.99,
+            "G5": 783.99,
+            "A5": 880.00
+        };
+
+        const ZAFFA_SCORE = [
+            ["D5", "D3", 0.36, "dum"],
+            ["Eb5", null, 0.36, "tak"],
+            ["F#5", "A3", 0.36, "tak"],
+            ["G5", null, 0.36, "dum"],
+            ["A5", "D3", 0.54, "dum"],
+            ["G5", null, 0.18, "tak"],
+            ["F#5", "A3", 0.36, "tak"],
+            ["Eb5", null, 0.36, "tak"],
+            ["D5", "D3", 0.54, "dum"],
+            ["A4", null, 0.18, "tak"],
+            ["D5", "A3", 0.36, "tak"],
+            ["F#5", null, 0.36, "dum"],
+            ["G5", "D3", 0.54, "dum"],
+            ["F#5", null, 0.18, "tak"],
+            ["Eb5", "A3", 0.36, "tak"],
+            ["D5", null, 0.36, "tak"],
+            ["A4", "D3", 0.36, "dum"],
+            ["Bb4", null, 0.36, "tak"],
+            ["C#5", "A3", 0.36, "tak"],
+            ["D5", null, 0.36, "dum"],
+            ["Eb5", "D3", 0.36, "dum"],
+            ["F#5", null, 0.36, "tak"],
+            ["G5", "A3", 0.54, "dum"],
+            ["A5", null, 0.18, "tak"],
+            ["G5", "D3", 0.36, "dum"],
+            ["F#5", null, 0.36, "tak"],
+            ["Eb5", "A3", 0.36, "tak"],
+            ["D5", null, 0.36, "dum"],
+            ["Eb5", "D3", 0.36, "tak"],
+            ["D5", null, 0.36, "tak"],
+            ["D5", "D3", 0.72, "dum"]
+        ];
+
+        function initAudioEngine() {
+            try {
+                if (!audioCtx) {
+                    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                    if (!AudioContextClass) return false;
+                    audioCtx = new AudioContextClass();
+                    masterGain = audioCtx.createGain();
+                    masterGain.gain.value = 0.72;
+                    masterGain.connect(audioCtx.destination);
+                }
+                if (audioCtx && audioCtx.state === "suspended") {
+                    audioCtx.resume().catch(() => {});
+                }
+                return true;
+            } catch (err) {
+                console.warn("Audio engine initialization error:", err);
+                return false;
+            }
+        }
+
+        function playZaffaLeadNote(freq, duration) {
+            try {
+                if (!audioCtx || !masterGain || !freq) return;
+                const now = audioCtx.currentTime;
+
+                const osc1 = audioCtx.createOscillator();
+                const osc2 = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                const filter = audioCtx.createBiquadFilter();
+
+                osc1.type = "sawtooth";
+                osc2.type = "triangle";
+
+                osc1.frequency.setValueAtTime(freq, now);
+                osc2.frequency.setValueAtTime(freq * 1.003, now);
+
+                filter.type = "lowpass";
+                filter.frequency.setValueAtTime(2200, now);
+
+                gain.gain.setValueAtTime(0.0001, now);
+                gain.gain.exponentialRampToValueAtTime(0.16, now + 0.05);
+                gain.gain.exponentialRampToValueAtTime(0.11, now + duration * 0.7);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + duration + 0.15);
+
+                osc1.connect(filter);
+                osc2.connect(filter);
+                filter.connect(gain);
+                gain.connect(masterGain);
+
+                osc1.start(now);
+                osc2.start(now);
+                osc1.stop(now + duration + 0.2);
+                osc2.stop(now + duration + 0.2);
+            } catch (err) {
+                console.warn("Lead note error:", err);
+            }
+        }
+
+        function playZaffaBassAndChime(bassFreq, beatType, duration) {
+            try {
+                if (!audioCtx || !masterGain) return;
+                const now = audioCtx.currentTime;
+
+                if (bassFreq) {
+                    const bassOsc = audioCtx.createOscillator();
+                    const bassGain = audioCtx.createGain();
+                    bassOsc.type = "sine";
+                    bassOsc.frequency.setValueAtTime(bassFreq, now);
+                    bassGain.gain.setValueAtTime(0.0001, now);
+                    bassGain.gain.exponentialRampToValueAtTime(0.24, now + 0.03);
+                    bassGain.gain.exponentialRampToValueAtTime(0.0001, now + Math.min(duration * 1.3, 0.75));
+                    bassOsc.connect(bassGain);
+                    bassGain.connect(masterGain);
+                    bassOsc.start(now);
+                    bassOsc.stop(now + Math.min(duration * 1.3, 0.8));
+                }
+
+                if (beatType === "dum") {
+                    const chimeOsc = audioCtx.createOscillator();
+                    const chimeGain = audioCtx.createGain();
+                    chimeOsc.type = "sine";
+                    chimeOsc.frequency.setValueAtTime(1174.66, now);
+                    chimeGain.gain.setValueAtTime(0.0001, now);
+                    chimeGain.gain.exponentialRampToValueAtTime(0.06, now + 0.01);
+                    chimeGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.35);
+                    chimeOsc.connect(chimeGain);
+                    chimeGain.connect(masterGain);
+                    chimeOsc.start(now);
+                    chimeOsc.stop(now + 0.4);
+                }
+            } catch (err) {
+                console.warn("Bass/chime error:", err);
+            }
+        }
+
+        function scheduleNextZaffaStep() {
+            try {
+                if (!isZaffaPlaying) return;
+                const stepData = ZAFFA_SCORE[zaffaStep % ZAFFA_SCORE.length];
+                const [melNote, bassNote, dur, beatType] = stepData;
+
+                if (melNote && ZAFFA_NOTES[melNote]) {
+                    playZaffaLeadNote(ZAFFA_NOTES[melNote], dur);
+                }
+                playZaffaBassAndChime(bassNote ? ZAFFA_NOTES[bassNote] : null, beatType, dur);
+
+                zaffaStep++;
+                zaffaTimeout = setTimeout(scheduleNextZaffaStep, dur * 1000);
+            } catch (err) {
+                console.warn("Zaffa sequencer error:", err);
+            }
+        }
+
+        function startZaffaMusic() {
+            try {
+                const ready = initAudioEngine();
+                if (!ready) return;
+                isZaffaPlaying = true;
+                updateMusicUI(true);
+                clearTimeout(zaffaTimeout);
+                scheduleNextZaffaStep();
+            } catch (err) {
+                console.warn("Start zaffa error:", err);
+            }
+        }
+
+        function stopZaffaMusic() {
+            try {
+                isZaffaPlaying = false;
+                clearTimeout(zaffaTimeout);
+                updateMusicUI(false);
+            } catch (err) {
+                console.warn("Stop zaffa error:", err);
+            }
+        }
+
+        function toggleZaffaMusic() {
+            if (isZaffaPlaying) {
+                stopZaffaMusic();
+                showStatusMessage("تم إيقاف موسيقى الزفة");
+            } else {
+                startZaffaMusic();
+                showStatusMessage("موسيقى الزفة قيد التشغيل");
+            }
+        }
+
+        function updateMusicUI(playing) {
+            const icon = document.getElementById("musicPlayIcon");
+            const btn = document.getElementById("musicPlayBtn");
+            const waveRing = document.getElementById("musicWaveRing");
+            if (!icon || !btn) return;
+
+            if (playing) {
+                icon.className = "fa-solid fa-music text-base text-goldDark animate-pulse";
+                btn.classList.add("ring-2", "ring-goldChampagne/70");
+                if (waveRing) waveRing.classList.remove("hidden");
+            } else {
+                icon.className = "fa-solid fa-volume-xmark text-base text-bronzeLight";
+                btn.classList.remove("ring-2", "ring-goldChampagne/70");
+                if (waveRing) waveRing.classList.add("hidden");
+            }
+        }
+
+        // ==================== AMBIENT ROSE PETALS & GOLDEN SPARKLES CANVAS ====================
+        let particles = [];
+        let canvas = null;
+        let ctx = null;
+
+        function initAmbientCanvas() {
+            try {
+                canvas = document.getElementById("ambientCanvas");
+                if (!canvas) return;
+                ctx = canvas.getContext("2d");
+                if (!ctx) return;
+
+                function resize() {
+                    if (!canvas) return;
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }
+                resize();
+                window.addEventListener("resize", resize);
+
+                for (let i = 0; i < 28; i++) {
+                    particles.push(createParticle(false));
+                }
+
+                requestAnimationFrame(animateParticles);
+            } catch (err) {
+                console.warn("Canvas init error:", err);
+            }
+        }
+
+        function createParticle(isBurst) {
+            const isGold = Math.random() > 0.65;
+            return {
+                x: isBurst ? window.innerWidth / 2 + (Math.random() - 0.5) * 140 : Math.random() * window.innerWidth,
+                y: isBurst ? window.innerHeight / 2 + (Math.random() - 0.5) * 100 : Math.random() * window.innerHeight,
+                vx: isBurst ? (Math.random() - 0.5) * 7 : (Math.random() - 0.5) * 0.7,
+                vy: isBurst ? (Math.random() - 0.7) * 7 : Math.random() * 0.9 + 0.35,
+                size: isGold ? Math.random() * 3.5 + 1.5 : Math.random() * 7 + 5,
+                rotation: Math.random() * Math.PI * 2,
+                rotSpeed: (Math.random() - 0.5) * 0.03,
+                isGold,
+                alpha: Math.random() * 0.45 + 0.25,
+                decay: isBurst ? 0.008 : 0
+            };
+        }
+
+        function triggerPetalBurst() {
+            try {
+                for (let i = 0; i < 45; i++) {
+                    particles.push(createParticle(true));
+                }
+            } catch (err) {
+                console.warn("Burst error:", err);
+            }
+        }
+
+        function animateParticles() {
+            try {
+                if (!ctx || !canvas) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.rotation += p.rotSpeed;
+
+                    if (p.decay > 0) {
+                        p.alpha -= p.decay;
+                        p.vy += 0.08;
+                        if (p.alpha <= 0) {
+                            particles.splice(i, 1);
+                            continue;
+                        }
+                    } else {
+                        if (p.y > canvas.height + 20) {
+                            p.y = -15;
+                            p.x = Math.random() * canvas.width;
+                        }
+                        if (p.x > canvas.width + 20) p.x = -15;
+                        if (p.x < -20) p.x = canvas.width + 15;
+                    }
+
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rotation);
+                    ctx.globalAlpha = Math.max(0, p.alpha);
+
+                    if (p.isGold) {
+                        ctx.fillStyle = "#c59f5d";
+                        ctx.beginPath();
+                        ctx.arc(0, 0, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else {
+                        ctx.fillStyle = "#e7bfc4";
+                        ctx.beginPath();
+                        ctx.moveTo(0, -p.size);
+                        ctx.bezierCurveTo(p.size, -p.size, p.size, p.size, 0, p.size);
+                        ctx.bezierCurveTo(-p.size, p.size, -p.size, -p.size, 0, -p.size);
+                        ctx.fill();
+                    }
+                    ctx.restore();
+                }
+
+                requestAnimationFrame(animateParticles);
+            } catch (err) {
+                console.warn("Canvas animation error:", err);
+            }
+        }
+
+        // ==================== COPY ADDRESS, WHATSAPP & CALENDAR (.ICS) ====================
+        function copyEventAddress() {
+            try {
+                const textToCopy = INVITATION_CONFIG.address;
+                const tempInput = document.createElement("textarea");
+                tempInput.value = textToCopy;
+                tempInput.setAttribute("readonly", "");
+                tempInput.style.position = "absolute";
+                tempInput.style.left = "-9999px";
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                const label = document.getElementById("copyAddressLabel");
+                const icon = document.getElementById("copyAddressIcon");
+                if (label) label.textContent = "تم النسخ";
+                if (icon) icon.className = "fa-solid fa-check text-goldDark";
+                showStatusMessage("تم نسخ العنوان بنجاح");
+
+                setTimeout(() => {
+                    if (label) label.textContent = "نسخ العنوان";
+                    if (icon) icon.className = "fa-regular fa-copy text-goldDark";
+                }, 2500);
+            } catch (err) {
+                console.warn("Copy address error:", err);
+            }
+        }
+
+        function getFormattedShareText() {
+            return `✨ *دَعْوَةُ حَفْلِ خُطُوبَة* ✨\n\n*${INVITATION_CONFIG.groomName} & ${INVITATION_CONFIG.brideName}*\nيتشرفان بدعوتكم لمشاركتهما فرحة خطوبتهما\n\n📅 ${INVITATION_CONFIG.dateText}\n⏰ ${INVITATION_CONFIG.timeText}\n📍 العنوان: ${INVITATION_CONFIG.address}\n🗺️ خرائط جوجل: ${INVITATION_CONFIG.mapUrl}\n\n*ملاحظة:*\n• يُمنع التصوير منعاً باتاً وسيتم أخذ الهواتف عند الدخول\n• لعدم الإحراج يمنع اصطحاب الأطفال بجميع الأعمار منعاً باتاً (رجاءً)\n• الدّعوة للمدعوين فقط`;
+        }
+
+        function shareViaWhatsApp() {
+            try {
+                const text = encodeURIComponent(getFormattedShareText());
+                window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");
+            } catch (err) {
+                console.warn("WhatsApp share error:", err);
+            }
+        }
+
+        function downloadICS() {
+            try {
+                const start = getTargetEventDate();
+                const end = new Date(start.getTime() + 3 * 60 * 60 * 1000);
+
+                const formatICSDate = (date) => {
+                    return date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+                };
+
+                const icsContent = [
+                    "BEGIN:VCALENDAR",
+                    "VERSION:2.0",
+                    "PRODID:-//EngagementInvitation//AR",
+                    "BEGIN:VEVENT",
+                    `DTSTART:${formatICSDate(start)}`,
+                    `DTEND:${formatICSDate(end)}`,
+                    `SUMMARY:حفل خطوبة ${INVITATION_CONFIG.groomName} & ${INVITATION_CONFIG.brideName}`,
+                    `DESCRIPTION:دعوة حفل خطوبة ${INVITATION_CONFIG.groomName} & ${INVITATION_CONFIG.brideName} - ${INVITATION_CONFIG.dateText}`,
+                    `LOCATION:${INVITATION_CONFIG.address}`,
+                    "END:VEVENT",
+                    "END:VCALENDAR"
+                ].join("\r\n");
+
+                const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = "دعوة-خطوبة-أحمد-وآلاء-12-ديسمبر-2026.ics";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+                showStatusMessage("تم تجهيز ملف التقويم ليوم 12 ديسمبر 2026");
+            } catch (err) {
+                console.warn("ICS download error:", err);
+            }
+        }
+    </script>
+</body>
+</html>
+```
